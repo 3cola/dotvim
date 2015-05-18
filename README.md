@@ -1,3 +1,7 @@
+# Papystiopa's Vim Setup
+
+derived (forked) from Adam Monsen meonkeys/dotvim
+
 # Adam's Vim Setup
 
 My "dot vim" (`~/.vim`) dir.
