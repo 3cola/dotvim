@@ -46,7 +46,7 @@ filetype plugin indent on " required by Vundle
 " These are in alphabetical order, except that the characters 'no' are ignored
 " if they appear at the beginning of an option name.
 set autoindent
-set background=light
+set background=dark
 set backspace=indent,eol,start    " allow backspace over anything in insert mode
 set nocompatible
 
@@ -76,14 +76,14 @@ set ignorecase
 set incsearch
 " from http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 set listchars=tab:··,trail:·,eol:¶
-set nolist
+set list
 set matchtime=2
 set matchpairs=(:),{:},[:],<:>
 set mousemodel=popup
 set nojoinspaces
-set nonumber
+set number
 " see :help 'statusline' for format of printheader (note spaces need escaping)
-set printheader=%<%f\ %y%=Adam\ Monsen\ \ --\ \ Page\ %N\ (%P)
+set printheader=%<%f\ %y%=Etienne\ Colaitis\ \ --\ \ Page\ %N\ (%P)
 "set printheader=%<%f\ %y%=Page\ %N\ (%P)
 set printoptions=paper:letter,duplex:off,number:n,left:10mm,portrait:y
 " good settings for XML
