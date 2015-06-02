@@ -32,6 +32,7 @@ Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'vim-scripts/nginx.vim'
+Plugin 'mru.vim'
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
@@ -154,6 +155,7 @@ map <F3> :set number!<CR>
 map <F4> :set wrap!<CR>
 map <F5> :set list!<CR>
 nmap <F6> :make<CR>
+nnoremap <silent> <F7> :noh<CR><Esc>
 " map F8 to switch on and off syntax highlighting
 map <F8> :call <SID>Swapcolor()<CR>
 " gf usually just opens the file in the same window
