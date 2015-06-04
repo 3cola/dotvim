@@ -33,6 +33,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'vim-scripts/nginx.vim'
 Plugin 'mru.vim'
+Plugin 'editorconfig-vim'
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
