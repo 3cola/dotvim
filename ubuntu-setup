@@ -20,16 +20,26 @@ installNpmPackage() {
 
 # YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+if ! [[ -x third_party/ycmd/ycm_core.so ]] 
+then
+  ./install.sh --clang-completer
+fi
 
 # Command-T
 installDebianPackage ruby1.9.1-dev
 cd ~/.vim/bundle/Command-T/ruby/command-t/
-ruby extconf.rb
-make
+if ! [[ -x ext.so ]]
+then
+  ruby extconf.rb
+  make
+fi
 
 # Syntastic: json
 installNpmPackage jsonlint
+
+# Syntastic: javascript
+installNpmPackage jshint
+
 # Syntastic: javascript
 installDebianPackage closure-linter
 
@@ -50,4 +60,11 @@ fi
 
 # Tern - http://ternjs.net
 cd ~/.vim/bundle/tern_for_vim
-npm install
+sudo npm -g install
+
+cd ~/.vim/bundle/tern_for_vim/node_modules/tern
+sudo npm -g install
+
+cd ~/.vim/bundle/tern_for_vim/node_modules/tern/plugin
+wget https://raw.githubusercontent.com/Slava/tern-meteor/master/meteor.js
+
